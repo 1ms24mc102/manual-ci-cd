@@ -34,7 +34,11 @@ pipeline {
                 }
             }
         }
-
+        stage('Cleanup Old Stack') {
+            steps {
+                sh 'docker stack rm node_stack || true'
+            }
+        }        
         stage('Deploy to Docker Swarm') {
             steps {
                 sh 'docker stack deploy -c docker-swarn.yml node_stack'
