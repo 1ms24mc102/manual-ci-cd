@@ -2,6 +2,6 @@ version: '3.8'
 
 services:
   node-app:
-    image: 1ms24mc102/manual-ci-cd:tagname
+    image: 1ms24mc102/manual-ci-cd:latest
     ports:
-      - "3000:3000"
+      - "3001:3000"
